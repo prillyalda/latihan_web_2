@@ -6,7 +6,7 @@ class Latihan2 extends CI_Controller
 	public function index()
 {
 		$this->load->helper('url');
-		$this->load->view('input_matakuliah.html');
+		$this->load->view('input_matakuliah.php');
 }
 	public function cetak()
 {
@@ -14,6 +14,7 @@ class Latihan2 extends CI_Controller
 		$namaMataKuliah = $this->input->post('nama');
 		$sksMataKuliah = $this->input->post('sks');
 
+		$this->load->library('form_validation');
 		$this->form_validation->set_rules(
 			'kode',
 			'Kode Matakuliah',
@@ -35,7 +36,7 @@ class Latihan2 extends CI_Controller
 
 if ($this->form_validation->run() != true) {
 	$this->load->helper('url');
-	$this->load->view('input_matakuliah');
+	$this->load->view('input_matakuliah.php');
 } else {
 	if ($sksMataKuliah == 1) {
 		$sksUnggulan = "SKS Reguler";

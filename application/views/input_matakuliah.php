@@ -35,7 +35,6 @@
         <td colspan="3"><input type="submit" name="submit" id="submit" value="submit"></td>
     </tr>
         </table>
-        <?php echo validation_errors(); ?>
         </form>
     </body>
 </html>
