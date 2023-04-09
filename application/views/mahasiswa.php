@@ -38,6 +38,7 @@
                 </td>
                 <td>
                     <a href="<?= base_url('index.php/mahasiswa/hapus/' . $row->nim); ?>">hapus</a>
+                    <a href="<?= base_url('index.php/mahasiswa/edit/' . $row->nim); ?>">edit</a>
                 </td>
             </tr>
         <?php endforeach; ?>
